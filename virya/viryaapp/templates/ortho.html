@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/4b1323b23d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<table class="table table-success table-striped">
+    <tr>
+        <th>image</th>
+        <th>name</th>
+        <th>country</th>
+        <th>state</th>
+        <th>city</th>
+        <th>qualification</th>
+        <th>specialisation</th>
+    </tr>
+    <tr>
+         <td><input type="file" name="image"></td>
+         <td><input type="text" name="name">{{name}}</td>
+         <td><input type="text" name="country"></td>
+         <td><input type="text" name="state"></td>
+         <td><input type="text" name="city"></td>
+         <td><input type="text" name="qualification"></td>
+         <td><input type="text" name="specialisation"></td>
+        <td><input type="submit"></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
